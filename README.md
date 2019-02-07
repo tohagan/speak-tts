@@ -68,7 +68,7 @@ You can pass the following properties to the init function:
 
 ```javascript
 // Example with full conf 
-Speech.init({
+speech.init({
    	'volume': 1,
 		'lang': 'en-GB',
 		'rate': 1,
@@ -130,67 +130,73 @@ speech.speak({
 Set language (note that the language must be supported by the client browser) :
 
 ```javascript
-Speech.setLanguage('en-US')
+speech.setLanguage('en-US')
 ```
 
 Set the voice (note that the voice must be supported by the client browser) :
 
 ```javascript
-Speech.setVoice('Fiona') // you can pass a SpeechSynthesisVoice as returned by the init() function or just its name
+speech.setVoice('Fiona') // you can pass a SpeechSynthesisVoice as returned by the init() function or just its name
 ```
 
 Set the rate :
 
 ```javascript
-Speech.setRate(1) 
+speech.setRate(1) 
 ```
 
 Set the volume :
 
 ```javascript
-Speech.setVolume(1) 
+speech.setVolume(1) 
 ```
 
 Set the pitch :
 
 ```javascript
-Speech.setPitch(1) 
+speech.setPitch(1) 
+```
+
+Speak each sentence using a separate uttterance :
+
+```javascript
+speech.setSplitSentences(true)
 ```
 
 Pause talking in progress:
 
 ```javascript
-Speech.pause()
+speech.pause()
 ```
 
 Resume talking in progress:
 
 ```javascript
-Speech.resume()
+speech.resume()
 ```
 
 Cancel talking in progress:
 
 ```javascript
-Speech.cancel()
+speech.cancel()
 ```
 
 Get boolean indicating if the utterance queue contains as-yet-unspoken utterances:
 
 ```javascript
-Speech.pending()
+speech.pending()
 ```
 
 Get boolean indicating if talking is paused:
 
 ```javascript
-Speech.paused()
+speech.paused()
 ```
 
 Get boolean indicating if talking is in progress:
 
 ```javascript
-Speech.speaking()
+speech.speaking()
 ```
 
 ## Supported languages (list may be incomplete and depends on your browser)
